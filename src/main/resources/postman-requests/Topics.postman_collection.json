@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Topics",
+		"_postman_id": "83340244-0bd0-ef52-5217-6264e8ef4092",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTopics",
+			"request": {
+				"url": "localhost:8080/topics",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getTopicById",
+			"request": {
+				"url": "localhost:8080/topics/003",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addTopic",
+			"request": {
+				"url": "localhost:8080/topics/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"203\",\"name\":\"Enterprise J2EE \",\"description\":\"Introduction to J2EE Basics\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateTopic",
+			"request": {
+				"url": "localhost:8080/topics/202",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"202\",\n    \"name\": \"test\",\n    \"description\": \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTopic",
+			"request": {
+				"url": "localhost:8080/topics/202",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"001\",\n    \"name\": \"test\",\n    \"description\": \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"url": "localhost:8080/actuator/health",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

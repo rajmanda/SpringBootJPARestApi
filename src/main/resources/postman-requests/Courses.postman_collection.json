@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Courses",
+		"_postman_id": "51c5d541-3c6b-b56f-a182-90675e8f006a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getCourses",
+			"request": {
+				"url": "localhost:8080/topics/101/cources",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getCourseById",
+			"request": {
+				"url": "localhost:8080/topics/101/cources/001",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addCourse",
+			"request": {
+				"url": "localhost:8080/topics/101/cources",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"001\",\"name\":\"Some bloddy Course\",\"description\":\"Introduction to bloddy Course Basics\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateCourse",
+			"request": {
+				"url": "localhost:8080/topics/101/courses/002/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"002\",\n    \"name\": \"Updated Course\",\n    \"description\": \"Updated Introduction to bloddy Course Basics\",\n    \"topic\": {\n        \"id\": \"101\",\n        \"name\": \"Core Java \",\n        \"description\": \"Introduction to Core Java\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCourse",
+			"request": {
+				"url": "localhost:8080/topics/101/courses/001",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"001\",\n    \"name\": \"test\",\n    \"description\": \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
